@@ -37,8 +37,10 @@ export default class SongSearch extends React.Component {
     // console.log(this.state.tracks);
     return (
       <>
-        <input type="text" onChange={(event) => this.textChange(event.target.value)} /> {/*{} for js*/}
-        <button onClick={this.search}>search</button>
+      <div class="container" >
+      <div class="child">
+        <input style={{width:"200px",height:"25px"}} placeholder="Search Song Here" type="text" onChange={(event) => this.textChange(event.target.value)} /> {/*{} for js*/}
+        <button onClick={this.search}>Search</button>
         <div className="wrapper">
         {this.state.tracks.map((track) => (
           <div className="song">
@@ -49,6 +51,8 @@ export default class SongSearch extends React.Component {
             </div>
           </div>
         ))}
+        </div>
+        </div>
         </div>
       </>
     );
